@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script language="javascript">
+            function icerik(kar,lstring){
+                val=false;
+                for(var i=1;i<=lstring.length;i++){
+                    if(lstring.substring(i,i+1)==kar){
+                        val=true;
+                        break;
+                    }
+                }
+                return val;
+            }
+
+            function verikontrol(){
+                if(icerik("@",document.form1.eadres.value)){
+                    document.form1.submit();
+                }
+                else{
+                    alert( "yazdığınız e-posta geçersiz")
+                    return
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>E-posta konrol</h3>
+        <form name="form1">
+            <b>mail adresinizi giriniz:</b>
+            <input type="text" name="eadres"><p>
+            <input type="button" value="gönder" name="button1" onClick="verikontrol()">
+        </form>
+    </body>
+</html>

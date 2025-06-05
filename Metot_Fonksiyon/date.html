@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarih Özelliği</title>
+</head>
+<body>
+    <script>
+        var suan = new Date();
+        var ayAd = suan.getMonth() + 1; 
+        var gunAd = suan.getDay(); 
+        var GunNo = suan.getDate();
+        var Gun = "", Ay = "";
+
+        if (gunAd == 0) Gun = "Pazar";
+        if (gunAd == 1) Gun = "Pazartesi";
+        if (gunAd == 2) Gun = "Salı";
+        if (gunAd == 3) Gun = "Çarşamba";
+        if (gunAd == 4) Gun = "Perşembe";
+        if (gunAd == 5) Gun = "Cuma";
+        if (gunAd == 6) Gun = "Cumartesi";
+        if (ayAd == 1) Ay = "Ocak";
+        if (ayAd == 2) Ay = "Şubat";
+        if (ayAd == 3) Ay = "Mart";
+        if (ayAd == 4) Ay = "Nisan";
+        if (ayAd == 5) Ay = "Mayıs";
+        if (ayAd == 6) Ay = "Haziran";
+        if (ayAd == 7) Ay = "Temmuz";
+        if (ayAd == 8) Ay = "Ağustos";
+        if (ayAd == 9) Ay = "Eylül";
+        if (ayAd == 10) Ay = "Ekim";
+        if (ayAd == 11) Ay = "Kasım";
+        if (ayAd == 12) Ay = "Aralık";
+
+        var buGunTar = GunNo + " " + Ay + " " + Gun;
+        document.write("<h3>" + suan + "</h3>");
+        document.write("<span style='font-size:20px;'><b>Bugün: " + buGunTar + "</b></span>");
+    </script>
+</body>
+</html>

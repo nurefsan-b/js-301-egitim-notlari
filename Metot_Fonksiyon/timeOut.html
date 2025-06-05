@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            canlandırma örneği
+        </title>
+    </head>
+    <body><center>
+        <script language="javascript">
+            var sayac=1;
+            resim=["1","2","3","4"];
+            dizi=new Array();
+            for (i=1;i<7;i++){
+                dizi[i]=new Image();
+                dizi[i].src=i+".jpg";
+            }
+            function basla(){
+                if(sayac==6){
+                    sayac=1;
+                }
+                else
+                sayac++;
+            document.resim.src=dizi[sayac],src;
+            sdur=setTimeout("basla()",80);
+            }
+            function dur(){
+                clearTimeout(sdur);
+                document.resim.src=dizi[1].src;
+            }
+        </script>
+        <p><b>Basit canlandırma</b></p>
+        <p><img src="1.gif" width="200" name="resim" height="80" border="2" align="bottom"></p>
+        <form>
+            <input type="button" name="button1" value="basla" onClick="basla()">
+            <input type="button" name="button2" value="son" onclick="dur()" Checked>
+        </form>
+    </body>
+</html>

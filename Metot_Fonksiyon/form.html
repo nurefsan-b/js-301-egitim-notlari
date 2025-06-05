@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            form nesnesi örnek
+        </title>
+    </head>
+    <script>
+        function degis(d){
+            if(d=="buyuk"){
+            document.form1.ad.value=document.form1.ad.value.toUpperCase();
+            document.form1.soyad.value=document.form1.soyad.value.toUpperCase();}
+
+            else{
+                document.form1.ad.value=document.form1.ad.value.toLowerCase();
+                document.form1.soyad.value=document.form1.soyad.value.toLowerCase();
+            }
+        }
+    </script>
+    <body>
+        <h3>form uygulaması</h3>
+
+        <form name="form1">
+            <b>Ad:</b>
+            <input type="text" name="ad" size="20">
+            <br><b>soyad:</b>
+            <input type="text" name="soyad" size="20">
+            <input type="button" value="büyük harf" name="buyukharf" onClick="degis('buyuk')">
+            <input type="button" value="küçük harf" name="kucukharf" onClick="degis('kucuk')">
+        </form>
+    </body>
+</html>
