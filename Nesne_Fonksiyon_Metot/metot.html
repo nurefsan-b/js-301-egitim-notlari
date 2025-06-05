@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>İçindekiler</title>
+    </head>
+    <body bgColor="gray" text="darkblue">
+        <script language="javascript">
+            function oto(marka,model,yil,renk,sahis){
+                this.marka=marka;
+                this.model=model;
+                this.yil=yil;
+                this.renk=renk;
+                this.sahis=sahis;
+                this.otoBilgi=otoBilgi;
+            }
+            function otoBilgi(){
+                var bilgi=this.yil+" "+this.marka+" "+this.model+" "+this.renk+" "+this.sahis.ad+" ";
+                document.write("<h3>"+bilgi+"</h3>");
+            }
+            function sahis(ad,yas,cins){
+                this.ad=ad;
+                this.yas=yas;
+                this.cins=cins;
+            }
+            osman=new sahis("Osman uysal",46,"E");
+            ayse=new sahis("ayse okan",36,"K");
+            selin=new sahis("selin can",27,"K");
+            oto1 = new oto("opel", "zafira", 2000,"gri",osman);
+            oto2 = new oto("citroen", "picasso", 2000,"beyaz",ayse);
+            oto3 = new oto("honda", "crv", 2000,"yeşil",selin);
+            oto1.otoBilgi();
+            oto2.otoBilgi();
+            oto3.otoBilgi();
+        </script>    
+    </body>
+</html>

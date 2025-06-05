@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Script ilk uygulama
+        </title>
+        <script language="javascript">
+            function Pers(ad,saatucret){
+                this.ad=ad;
+                this.saatucret=saatucret;
+                this.odeUcret=odeUcret;
+            }
+            function odeUcret(saat){
+                return this.saatucret*saat;
+            }
+            pers1=new Pers("Hasan",50);
+            pers2=new Pers("Berna",40);
+            s1=parseInt(window.prompt("birinci personelin calistigi saat miktari...","0"))
+            p1 = pers1.odeUcret(s1);
+            s2=parseInt(window.prompt("ikinci personelin calistigi saat miktari...","0"))
+            p2 = pers2.odeUcret(s2);
+            document.write("<H3>Personelin Adi="+pers1.ad+"</H3>");
+            document.write("<H3>Calistigi saat="+s1+"</H3>");
+            document.write("<H3>Saat Ucreti="+pers1.saatucret+"</H3>");
+            document.write("<H3>Alacagi Maas="+p1+"</H3>");
+            document.write("<H3>Personelin Adi="+pers2.ad+"</H3>");
+            document.write("<H3>Calistigi saat="+s2+"</H3>");
+            document.write("<H3>Saat Ucreti="+pers2.saatucret+"</H3>");
+            document.write("<H3>Alacagi Maas="+p2+"</H3>");
+            
+            </script>
+    </head>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>js ilk uygulama</title>
+        <h2>20. yy türk edebiyatı ünlü şairleri</h2>
+    </head>
+    <body>
+        <script language="javascript">
+            yazSairler("U","atilla ilhan","melih cevdet anday","ceyhun atuf kansu","hilmi yavuz");
+            function yazSairler(par){
+                document.write("<"+par+"L>");
+                for(var i=1;i<yazSairler.arguments.length;i++)
+                document.write("<LI>"+yazSairler.arguments[i])
+                document.write("</"+par+"L>");
+            }
+        </script>
+    </body>
+</html>
