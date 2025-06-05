@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toplam ve Ortalama</title>
+  </head>
+  <body>
+    <script>
+      let sayi = 1, toplam = 0, ortalama;
+
+      do {
+        toplam = toplam + sayi;
+        sayi++;
+      } while (sayi < 6);
+
+      ortalama = toplam / (sayi - 1);
+
+      document.write("<h3>Sayıların Toplamı = " + toplam + "</h3>");
+      document.write("<h3>Sayıların Ortalaması = " + ortalama + "</h3>");
+    </script>
+  </body>
+</html>
