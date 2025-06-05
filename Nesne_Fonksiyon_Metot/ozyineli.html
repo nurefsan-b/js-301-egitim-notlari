@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h3>js uygulama</h3>
+        <script language="javascript">
+            function fakt(n)
+            {
+            if ((n == 0) || (n == 1))
+            return 1
+            else {
+            result = (n * fakt(n-1) )
+            return result
+             }
+            }
+            for(i=5;i<=20;i=i+3)
+            document.write("<H3>"+i+"!="+fakt(i)+"</H3>");
+        </script>
+    </body>
+</html>
