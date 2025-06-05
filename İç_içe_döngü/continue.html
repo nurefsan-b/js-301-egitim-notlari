@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            continue
+        </title>
+    </head>
+    <body bgColor="gray">
+        <script language="javascript">
+            var s,i,n,c;
+            n=parseInt(window.prompt("üst limit:","0"));
+            s=0;c=0;
+            for(i=1;i<=n;i++){
+                if(i%3!=0) continue;
+                document.write("<h3>sayı="+i);
+                    s+=i;
+                    c++;
+            }
+            document.write("<h3>3-"+n+"arasındaki 3 ile bölünebilen sayı miktarı:"+c);
+            document.write("<h3>bu tür sayıların toplamı:"+s);
+        </script> 
+    </body>
+</html>

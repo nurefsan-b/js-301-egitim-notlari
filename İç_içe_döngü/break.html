@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>break</title>
+    </head>
+    <body bgColor="gray">
+        <script language="javascript">
+            var s,say,ort;
+            var c;
+            s=0;
+            c=0;
+            window.alert("\nsayı girişine son vermek için negatif sayı giriniz");
+            while(true)
+        {
+            say=parseInt(window.prompt("Bir sayı girin..","0"));
+            if(say<0) break;
+            s+=say;
+            c++;
+        }
+        ort=s/c;
+        document.write("<h3>sayıların toplamı:"+s);
+        document.write("<h3> sayıların ortalaması:"+ort);
+        document.write("<h3>girilen sayı miktarı:"+c);
+        
+        </script>
+    </body>
+</html>
