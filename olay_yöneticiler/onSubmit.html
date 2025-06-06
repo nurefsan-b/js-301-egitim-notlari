@@ -1,0 +1,24 @@
+<html>
+    <head>
+    </head>
+    <script>
+        var veri=false;
+        function verikont(){
+            if(document.form1.kar.value.length==5){
+                return true;
+            }
+            else{
+                alert("tam olarak 5 giriniz"+document.form1.kar.value+"karakter geçerli değil");
+                return false;
+            }
+        }
+    </script>
+    <body>
+        <h2>onSubmit Uygulaması</h2>
+        <form name="form1" onSubmit="return verikont()">
+            <b>5 karakter giriniz</b>
+            <input type="text" name="kar" size="5">
+            <p><input type="submit" value="karakterler girildi" name="submit1" onClick="document.form1.kar.value=document.form.kar.value.toUpperCase()"></p>
+        </form>
+    </body>
+</html>

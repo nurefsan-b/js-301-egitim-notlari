@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script language="javascript">
+            function goster(){
+                var m=""
+                if(document.ReaderInfo.cins[0].checked){
+                    m='kadın';
+                }
+                if(document.ReaderInfo.cins[1].checked){
+                    m='erkek';
+                }
+                alert("seçilen cinsiyet:"+m);
+
+            }
+        </script>
+    </head>
+    <body>
+        <h3>cinsiyetinizi seçiniz</h3>
+        <form name="ReaderInfo">
+            <input type="radio" name="cins" value="kadın">kadın<br>
+            <input type="radio" name="cins" value="erkek">erkek<br>
+            <p>
+            <input type="button" value="tıkla" onClick="goster()">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h3>
+            Arama
+        </h3>
+        <script>
+            function sec(s){
+                return s.options[s.selectedIndex].value
+            }
+        </script>
+        <form>
+            <select name="list" size="1" onChange="location=sec(this)">
+                <option value="#">Bir arama motoru seçiniz.</option>
+                <option value="http://www.google.com"> Google </option>
+                <option value="http://wwww.yahoo.com">Yahoo</option>
+                <option value="http://www.yandex.com">Yandex</option>
+
+            </select>
+        </form>
+    </body>
+</html>
