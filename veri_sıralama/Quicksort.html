@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Quicksort</title>
+</head>
+<body>
+<script>
+var a=new Array(11);
+document.write("<H3>"+"QUICKSORT SIRALAMA ALGORİTMASI"+"</H3>");
+document.write("<H3>"+"SIRALAMA ISLEMINDEN ÖNCEKİ DIZI"+"</H3>");
+document.writeln( "<TABLE BORDER = '2' WIDTH = '50%'>" );
+document.writeln( "<TR><TD WIDTH = '80'><B>İNDİS</B>"
++ "<TD><B>DEĞER</B></TR>" );
+for ( i = 0; i < a.length; i++ )
+{
+a[i]=Math.floor(1+Math.random()*10000);
+document.writeln( "<TR><TD>" + i + "<TD>" +
+a[ i ] + "</TR>" );
+}
+document.writeln( "</TABLE>" );
+HIZLI_SIRALA(a, 0, a.length-1);
+document.write("<H3>"+"SIRALAMA ISLEMINDEN SONRAKİ DIZI"+"</H3>");
+document.writeln( "<TABLE BORDER = '2' WIDTH = '50%'>" );
+document.writeln( "<TR><TD WIDTH = '80'><B>İNDİS</B>"
++ "<TD><B>DEĞER</B></TR>" );
+for ( i = 0; i < a.length; i++ )
+{
+document.writeln( "<TR><TD>" + i + "<TD>" +
+a[ i ] + "</TR>" );
+}
+document.writeln( "</TABLE>" );
+/* HIZLI_SIRALA adlı fonksiyon 3 argüman alıyor
+İlk argüman sıralanacak elemanları içeren a dizisidir.
+İkinci argüman dizinin başlangıç pozisyonunu ve 3. argüman ise dizinin son elemanını gösteriyor
+HIZLI_SIRALA fonksiyonunun her çağrılışında dizinin farklı bir parçası işlem görecektir.*/
+function HIZLI_SIRALA( a, sol, sag)
+{var dur, son,u;
+if (sol >= sag)
+return;
+u=Math.floor((sol+sag)/2);
+DEGIS(a, sol, u);
+/*Dizinin ortasındaki eleman pivot olarak alınıyor ve listenin en soluna kaydırılıyor. */
+son = sol;
+for (dur = sol + 1; dur <= sag; dur++)
+if (a[dur] < a[sol])
+DEGIS(a, ++son, dur);
+DEGIS(a, sol, son);
+HIZLI_SIRALA(a, sol, son-1);
+HIZLI_SIRALA(a, son+1, sag);
+}
+/* DEGIS fonksiyonu dizi içindeki iki elemanın yerlerini değiştirmektedir.*/
+function DEGIS(a, i, j)
+{var t;
+t = a[i];
+a[i] = a[j];
+a[j] = t;
+}
+</script>
+</body>
+</html>
