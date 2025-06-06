@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random</title>
+</head>
+<body>
+    <script>
+        var i, t = 0, sayi;
+        sayi = new Array(6);
+
+        document.write("<table border='2' width='50%'>");
+        document.write("<tr><td width='80'><b>indis</b></td><td><b>Değer</b></td></tr>");
+
+        for (i = 0; i < sayi.length; i++) {
+            sayi[i] = Math.floor(1 + Math.random() * 10);
+            document.write("<tr><td>" + i + "</td><td>" + sayi[i] + "</td></tr>");
+            t = t + sayi[i];
+        }
+
+        document.write("</table>");
+        document.write("<h3>Toplam = " + t + "</h3>");
+    </script>
+</body>
+</html>
