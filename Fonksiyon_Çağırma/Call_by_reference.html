@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            içindekiler
+        </title>
+    </head>
+    <body>
+        <script>
+            function hes(y){
+                for (var a in y)
+                y[a]=y[a]-4;
+            }
+            var x=[3,6,9,12,15];
+            document.write("<h4>fonksiyonu çağırmadan önce x dizisi</h4>");
+            for(var b in x)
+            document.write("<h4>x["+b+"]="+x[b]+"</h4>");
+            hes(x);
+            document.write("<h4>fonksiyonu çağırdıktan sonra x dizisi</h4>");
+            for(var b in x)
+            document.write("<h4>x["+b+"]="+x[b]+"</h4>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            içindekiler
+        </title>
+    </head>
+    <body>
+        <script>
+            function hes1(a){
+                a=a*5;
+                document.write("<h4>a="+a+"</h4>");
+            }
+            var x=[3,6,9,12,15];
+            document.write("<h4>fonksiyon çağırmadan önce x dizisi</h4>");
+            for(var b in x)
+            document.write("<h4>c["+b+"]="+x[b]+"</h4>");
+            for(var i in x)
+            hes1(x[i])
+            document.write("<h4>fonksiyon çağırdıktan sonra x dizisi</h4>");
+            for(var b in x)
+            document.write("<h4>x["+b+"]="+x[b]+"</h4>");
+        </script>
+    </body>
+</html>
